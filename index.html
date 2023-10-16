@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Определение сезона года</title>
+  <script>
+    function determineSeason() {
+      var monthNumber = prompt("Введите номер месяца (1-12):");
+
+      if (monthNumber === null) {
+        alert("Отменено");
+      } else {
+        monthNumber = parseInt(monthNumber);
+
+        if (monthNumber >= 1 && monthNumber <= 12) {
+          var season;
+
+          switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+              season = "Зима";
+              break;
+            case 3:
+            case 4:
+            case 5:
+              season = "Весна";
+              break;
+            case 6:
+            case 7:
+            case 8:
+              season = "Лето";
+              break;
+            case 9:
+            case 10:
+            case 11:
+              season = "Осень";
+              break;
+          }
+
+          alert("Сезон года: " + season);
+        } else {
+          alert("Некорректный номер месяца. Введите число от 1 до 12.");
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="determineSeason()">Определить сезон года</button>
+</body>
+</html>
